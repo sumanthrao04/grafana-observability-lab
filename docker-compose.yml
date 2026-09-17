@@ -1,0 +1,47 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: observability-postgres
+
+    environment:
+      POSTGRES_DB: observability
+      POSTGRES_USER: observability
+      POSTGRES_PASSWORD: observability123
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U observability -d observability"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
+  demo:
+    build:
+      context: ./demo
+
+    container_name: observability-demo
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: observability
+      DB_USER: observability
+      DB_PASSWORD: observability123
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+
+volumes:
+  postgres-data:
