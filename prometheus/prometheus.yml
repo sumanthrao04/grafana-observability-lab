@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+
+  - job_name: "spring-boot-demo"
+
+    metrics_path: "/actuator/prometheus"
+
+    static_configs:
+      - targets:
+          - "demo:8080"
