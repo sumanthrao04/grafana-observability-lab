@@ -93,6 +93,47 @@ services:
       - prometheus
 
 
+  # -------------------------------------------
+  # Loki
+  # -------------------------------------------
+  loki:
+    image: grafana/loki:latest
+    container_name: observability-loki
+
+    ports:
+      - "3100:3100"
+
+    command:
+      - "-config.file=/etc/loki/loki-config.yml"
+
+    volumes:
+      - ./loki/loki-config.yml:/etc/loki/loki-config.yml:ro
+      - loki-data:/loki
+
+
+  # -------------------------------------------
+  # Alloy
+  # -------------------------------------------
+  alloy:
+    image: grafana/alloy:latest
+    container_name: observability-alloy
+
+    ports:
+      - "12345:12345"
+
+    volumes:
+      - ./alloy/config.alloy:/etc/alloy/config.alloy:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    command:
+      - "run"
+      - "--server.http.listen-addr=0.0.0.0:12345"
+      - "/etc/alloy/config.alloy"
+
+    depends_on:
+      - loki
+
+
 # -------------------------------------------
 # Persistent Volumes
 # -------------------------------------------
@@ -100,3 +141,4 @@ volumes:
   postgres-data:
   prometheus-data:
   grafana-data:
+  loki-data:
