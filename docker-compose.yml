@@ -44,6 +44,18 @@ services:
       DB_USER: observability
       DB_PASSWORD: observability123
 
+      OTEL_SERVICE_NAME: observability-demo
+
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+
+      OTEL_TRACES_EXPORTER: otlp
+
+      OTEL_METRICS_EXPORTER: none
+
+      OTEL_LOGS_EXPORTER: none
+
     depends_on:
       postgres:
         condition: service_healthy
@@ -134,6 +146,45 @@ services:
       - loki
 
 
+  # -------------------------------------------
+  # Tempo
+  # -------------------------------------------
+  tempo:
+    image: grafana/tempo:latest
+    container_name: observability-tempo
+
+    command:
+      - "-config.file=/etc/tempo/tempo.yml"
+
+    volumes:
+      - ./tempo/tempo.yml:/etc/tempo/tempo.yml:ro
+      - tempo-data:/var/tempo
+
+    ports:
+      - "3200:3200"
+
+
+  # -------------------------------------------
+  # OTel Collector
+  # -------------------------------------------
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    container_name: observability-otel-collector
+
+    command:
+      - "--config=/etc/otelcol-contrib/config.yml"
+
+    volumes:
+      - ./otel-collector/otel-collector.yml:/etc/otelcol-contrib/config.yml:ro
+
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+
+    depends_on:
+      - tempo
+
+
 # -------------------------------------------
 # Persistent Volumes
 # -------------------------------------------
@@ -142,3 +193,4 @@ volumes:
   prometheus-data:
   grafana-data:
   loki-data:
+  tempo-data:
