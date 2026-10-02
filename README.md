@@ -171,12 +171,12 @@ failures, and latency.
 ### Springboot Application Status
 `#springboot` `#docker` `#containers` `#status`
 
-![Phase 1 - Application Containers](screenshots\Phase-1\SpringbootApplicationStatus.png)
+![Phase 1 - Application Containers](screenshots/Phase-1/SpringbootApplicationStatus.png)
 
 ### Application Startup
 `#startup` `#initialization` `#logs` `#startup-sequence`
 
-![Phase 1 - Application Containers](screenshots\Phase-1\ApplicationStartup.png)
+![Phase 1 - Application Containers](screenshots/Phase-1/ApplicationStartup.png)
 
 
 ------------------------------------------------------------------------
@@ -262,17 +262,17 @@ sum(
 ### Prometheus Setup
 `#prometheus` `#configuration` `#setup` `#metrics`
 
-![Phase 2 - Prometheus Target](screenshots\Phase-2\PrometheusSetUP.png)
+![Phase 2 - Prometheus Target](screenshots/Phase-2/PrometheusSetUP.png)
 
 ### Target Health Status
 `#prometheus` `#targets` `#status` `#monitoring`
 
-![Phase 2 - Prometheus Target](screenshots\Phase-2\TargetHealth.png)
+![Phase 2 - Prometheus Target](screenshots/Phase-2/TargetHealth.png)
 
 ### Scraping Information
 `#prometheus` `#scraping` `#metrics` `#collection`
 
-![Phase 2 - Prometheus Target](screenshots\Phase-2\ScapingInfo.png)
+![Phase 2 - Prometheus Target](screenshots/Phase-2/ScapingInfo.png)
 
 ------------------------------------------------------------------------
 
@@ -337,27 +337,27 @@ JVM Monitoring
 ### Service Level Observability
 `#grafana` `#dashboard` `#red-metrics` `#monitoring`
 
-![Phase 3 - Grafana Application Dashboard](screenshots\Phase-3\Service-Level-observability.png)
+![Phase 3 - Grafana Application Dashboard](screenshots/Phase-3/Service-Level-observability.png)
 
 ### JVM Metrics
 `#grafana` `#jvm` `#memory` `#monitoring` `#performance`
 
-![Phase 3 - Grafana Application Dashboard](screenshots\Phase-3\JVM-Metrics.png)
+![Phase 3 - Grafana Application Dashboard](screenshots/Phase-3/JVM-Metrics.png)
 
 ### CPU & Disk Utilization
 `#grafana` `#cpu` `#disk` `#resource-metrics` `#performance`
 
-![Phase 3 - Grafana Application Dashboard](screenshots\Phase-3\CPU&Disk-Utilization.png)
+![Phase 3 - Grafana Application Dashboard](screenshots/Phase-3/CPU&Disk-Utilization.png)
 
 ### Application Slow Response
 `#grafana` `#latency` `#slow-request` `#performance-issue` `#simulation`
 
-![Phase 3 - Grafana Application Dashboard](screenshots\Phase-3\Application-slow.png)
+![Phase 3 - Grafana Application Dashboard](screenshots/Phase-3/Application-slow.png)
 
 ### Application Down Alert
 `#grafana` `#alert` `#incident` `#application-down` `#failure`
 
-![Phase 3 - Grafana Application Dashboard](screenshots\Phase-3\Application-down.png)
+![Phase 3 - Grafana Application Dashboard](screenshots/Phase-3/Application-down.png)
 
 ------------------------------------------------------------------------
 
@@ -437,42 +437,42 @@ Application ERROR
 ### Loki Datasource Configuration
 `#loki` `#grafana` `#datasource` `#configuration`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\01-loki-datasource.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/01-loki-datasource.png)
 
 ### Alloy Running Graph
 `#alloy` `#monitoring` `#visualization` `#health`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\02-alloy-running-graph.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/02-alloy-running-graph.png)
 
 ### Alloy Running Components
 `#alloy` `#components` `#status` `#log-collection`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\03-alloy-running-components.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/03-alloy-running-components.png)
 
 ### Spring Boot Application Logs
 `#logs` `#loki` `#application` `#centralized-logging`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\04-spring-boot-logs.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/04-spring-boot-logs.png)
 
 ### Error Log Query with LogQL
 `#loki` `#logql` `#error-logs` `#query` `#investigation`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\05-error-log-quer.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/05-error-log-quer.png)
 
 ### Metrics and Logs Dashboard Correlation
 `#grafana` `#dashboard` `#correlation` `#metrics-logs`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\06-metrics-and-logs-dashboard.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/06-metrics-and-logs-dashboard.png)
 
 ### Error Investigation Workflow
 `#logs` `#troubleshooting` `#investigation` `#error-analysis`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\07-Error-investigation.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/07-Error-investigation.png)
 
 ### Error & Warning Logs
 `#logs` `#loki` `#errors` `#warnings` `#log-levels`
 
-![Phase 4 - Loki Error Logs](screenshots\phase-04\Error&Warn-logs.png)
+![Phase 4 - Loki Error Logs](screenshots/phase-04/Error&Warn-logs.png)
 ------------------------------------------------------------------------
 
 # Phase 5 - Distributed Tracing
@@ -536,32 +536,32 @@ Each trace contains a unique **Trace ID**.
 ### Tempo Datasource Configuration
 `#tempo` `#grafana` `#datasource` `#configuration` `#tracing`
 
-![Phase 5 - Tempo Distributed Trace](screenshots\phase-05\01-tempo-datasource.png)
+![Phase 5 - Tempo Distributed Trace](screenshots/phase-05/01-tempo-datasource.png)
 
 ### OpenTelemetry Collector Running
 `#otel` `#collector` `#traces` `#otlp` `#running`
 
-![Phase 5 - Tempo Distributed Trace](screenshots\phase-05\02-otel-collector-running.png)
+![Phase 5 - Tempo Distributed Trace](screenshots/phase-05/02-otel-collector-running.png)
 
 ### Normal Request Trace
 `#tempo` `#trace` `#normal-request` `#healthy` `#performance`
 
-![Phase 5 - Tempo Distributed Trace](screenshots\phase-05\04-normal-request-trace.png)
+![Phase 5 - Tempo Distributed Trace](screenshots/phase-05/04-normal-request-trace.png)
 
 ### Slow Request Trace
 `#tempo` `#trace` `#slow-request` `#latency` `#investigation`
 
-![Phase 5 - Tempo Distributed Trace](screenshots\phase-05\05-slow-request-trace.png)
+![Phase 5 - Tempo Distributed Trace](screenshots/phase-05/05-slow-request-trace.png)
 
 ### Error Request Trace
 `#tempo` `#trace` `#error-request` `#failure` `#investigation`
 
-![Phase 5 - Tempo Distributed Trace](screenshots\phase-05\06-error-request-trace.png)
+![Phase 5 - Tempo Distributed Trace](screenshots/phase-05/06-error-request-trace.png)
 
 ### Complete Observability Stack
 `#grafana` `#dashboard` `#full-stack` `#end-to-end` `#observability`
 
-![Phase 5 - Tempo Distributed Trace](screenshots\phase-05\07-complete-observability-stack.png)
+![Phase 5 - Tempo Distributed Trace](screenshots/phase-05/07-complete-observability-stack.png)
 
 
 ------------------------------------------------------------------------
@@ -660,27 +660,27 @@ Loki Logs
 ### Correlation Trace Visualization
 `#correlation` `#trace-id` `#logs` `#traces` `#relationship`
 
-![Phase 6 - Telemetry correlation ](screenshots\phase-06\01-Corelationtrace.png)
+![Phase 6 - Telemetry correlation ](screenshots/phase-06/01-Corelationtrace.png)
 
 ### Loki Log with Trace ID
 `#loki` `#trace-id` `#logs` `#correlation` `#application-context`
 
-![Phase 6 - Telemetry correlation ](screenshots\phase-06\02-loki-log-with-trace-id.png)
+![Phase 6 - Telemetry correlation ](screenshots/phase-06/02-loki-log-with-trace-id.png)
 
 ### Loki View Trace Link (Derived Fields)
 `#loki` `#derived-fields` `#view-trace` `#correlation` `#linking`
 
-![Phase 6 - Telemetry correlation ](screenshots\phase-06\03-loki-view-trace-link.png)
+![Phase 6 - Telemetry correlation ](screenshots/phase-06/03-loki-view-trace-link.png)
 
 ### Tempo Related Logs
 `#tempo` `#related-logs` `#correlation` `#trace-to-logs` `#investigation`
 
-![Phase 6 - Telemetry correlation ](screenshots\phase-06\04-tempo-related-logs.png)
+![Phase 6 - Telemetry correlation ](screenshots/phase-06/04-tempo-related-logs.png)
 
 ### Derived Fields Configuration
 `#grafana` `#loki` `#derived-fields` `#configuration` `#trace-extraction`
 
-![Phase 6 - Telemetry correlation ](screenshots\phase-06\05-Derived-fields.png)
+![Phase 6 - Telemetry correlation ](screenshots/phase-06/05-Derived-fields.png)
 
 
 
@@ -791,7 +791,7 @@ Investigation
 ### Grafana Alert Rules Configuration
 `#alerting` `#alert-rules` `#grafana` `#configuration` `#incident-detection`
 
-![Phase 7 - Application Down Alert](screenshots\Phase-07\01-Alert-Rules.png)
+![Phase 7 - Application Down Alert](screenshots/Phase-07/01-Alert-Rules.png)
 
 
 ------------------------------------------------------------------------
